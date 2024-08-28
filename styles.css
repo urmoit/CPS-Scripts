@@ -1,0 +1,252 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #1d1d1d;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #575757;
+    color: #f4f4f4;
+}
+
+section {
+    padding: 40px 20px;
+    background: #fff;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.more-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: #1d1d1d;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.paid-script-btn {
+    background-color: #FF5733; /* Different color for paid script button */
+    border: 2px solid #FF5733;
+}
+
+.paid-script-btn:hover {
+    background-color: #C70039; /* Darker shade on hover */
+    border-color: #C70039;
+}
+
+.join-server-btn {
+    background-color: #28a745; /* Green color for joining server button */
+    border: 2px solid #28a745;
+}
+
+.join-server-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    border-color: #1e7e34;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    pre {
+        font-size: 1.2em;
+        white-space: pre-wrap; /* Ensure text wraps within the viewport */
+        word-wrap: break-word; /* Break long words to prevent overflow */
+    }
+}
+
+/* Additional styles for join-server.html */
+.join-server-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.join-server-container h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #28a745;
+}
+
+.join-server-container p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.join-server-container .server-info {
+    background-color: #f8f9fa;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.join-server-container pre {
+    background-color: #1d1d1d;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 1.1em; /* Larger font for better readability */
+    margin-top: 10px;
+}
+
+.join-server-container .discord-btn {
+    background-color: #7289da;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.join-server-container .discord-btn:hover {
+    background-color: #5b6eae;
+}
+
+/* Hide sidebar and adjust layout for join-server.html */
+.join-server-page .sidebar {
+    display: none;
+}
+
+.join-server-page .content {
+    margin-left: 0;
+    padding: 20px;
+}
+
+/* Bottom-right corner button for returning to index.html */
+.back-to-index-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5em;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-to-index-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Join the Creative Private Server</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <section id="pc" class="section">
+            <h2>Joining on PC</h2>
+            <p>Step 1: Open Notepad as Administrator and open your "hosts" file in <code>%windir%\System32\drivers\etc</code>. Add the following lines:</p>
+            <pre>
+79.137.35.236 growtopia1.com
+15.235.187.105 growtopia2.com
+79.137.35.236 www.growtopia1.com
+15.235.187.105 www.growtopia2.com
+79.137.35.236 growtopiagame.com
+15.235.187.105 hamumu.com
+79.137.35.236 rtsoft.com
+            </pre>
+            <p>Step 2: Enter Growtopia as usual.</p>
+            <p>Step 3: Enjoy!</p>
+            <div class="warning">
+                Warning: Growpai and Bothax are not compatible with ReGrowtopia.
+            </div>
+            <a href="download/ReGrowtopia.zip" class="download-btn" target="_blank">Download ReGrowtopia</a>
+        </section>
+
+        <section id="macos" class="section">
+            <h2>Joining on MacOS</h2>
+            <p>Step 1: Open the file <code>/etc/hosts</code> using an editor (e.g., nano or vi).</p>
+            <p>Step 2: Add the following lines:</p>
+            <pre>
+79.137.35.236 growtopia1.com
+15.235.187.105 growtopia2.com
+79.137.35.236 www.growtopia1.com
+15.235.187.105 www.growtopia2.com
+79.137.35.236 growtopiagame.com
+15.235.187.105 hamumu.com
+79.137.35.236 rtsoft.com
+            </pre>
+            <p>Step 3: Save the changes and restart Growtopia.</p>
+            <p><strong>NOTE:</strong> Ensure you are using the latest version of Growtopia. If issues arise, restart the game.</p>
+        </section>
+
+        <section id="android" class="section">
+            <h2>Joining on Android</h2>
+            <p>Use the hosts file with Virtual Hosts (available on <a href="https://www.apkshub.com/app/com.github.xfalcon.vhosts" target="_blank">APKShub</a>). For Hosts Go, configure the following settings:</p>
+            <pre>
+79.137.35.236 rtsoft.com
+15.235.187.105 hamumu.com
+79.137.35.236 growtopiagame.com
+            </pre>
+            <p>For versions below V3.99, add:</p>
+            <pre>
+79.137.35.236 growtopia1.com
+15.235.187.105 growtopia2.com
+79.137.35.236 www.growtopia1.com
+15.235.187.105 www.growtopia2.com
+            </pre>
+            <a href="download/latest-hosts.zip" class="download-btn" target="_blank">Download Latest Hosts File</a>
+            <div class="warning">
+                NOTE: As of Growtopia V4.61+, Mobile Data is not supported; use Wi-Fi. To use Mobile Data, downgrade to V4.59 (available on <a href="https://www.apkmirror.com/apk/ubisoft-entertainment/growtopia/growtopia-4-59-release/growtopia-4-59-2-android-apk-download/" target="_blank">APKMirror</a>).
+            </div>
+        </section>
+
+        <section id="iphone" class="section">
+            <h2>Joining on iPhone</h2>
+            <h3>SURGE 5 METHOD</h3>
+            <p>Step 1: Download Surge 5 from the App Store.</p>
+            <p>Step 2: Tap the arrow next to or after "Default.conf".</p>
+            <p>Step 3: Select "Default".</p>
+            <p>Step 4: Paste this configuration:</p>
+            <pre>
+[General]
+
+[Rule]
+FINAL,DIRECT
+
+[Host]
+www.growtopia1.com = 79.137.35.236
+www.growtopia2.com = 15.235.187.105
+            </pre>
+            <p>Step 5: Tap "Done".</p>
+            <p>Step 6: (Optional) Rename this configuration to "Creative" for easier access.</p>
+            <p>Step 7: Click "Setup" and grant the necessary permissions.</p>
+            <p>Step 8: You are now ready to play CreativePS on iOS!</p>
+            <h3>SURGE 3 METHOD</h3>
+            <p>For DNS Configuration, use the following settings:</p>
+            <pre>
+DOMAIN: www.growtopia1.com  VALUE: 79.137.35.236
+DOMAIN: www.growtopia2.com  VALUE: 15.235.187.105
+            </pre>
+            <div class="warning">
+                NOTE: As of Growtopia V4.61+, Mobile Data is no longer supported; use Wi-Fi only.
+            </div>
+        </section>
+        <a href="index.html" class="back-to-index-btn">←</a>
+
+    </div>
+</body>
+</html>
