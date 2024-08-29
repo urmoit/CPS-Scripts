@@ -25,6 +25,17 @@
         <a href="paid-scripts.html" class="more-btn">Paid Script Page</a>
     </section>
 
+    <section id="poll" class="section">
+        <h2>Poll Section</h2>
+        <div class="poll-container">
+            <div class="poll-question">Should we make an app to find the scripts?</div>
+            <div class="poll-options">
+                <button onclick="vote('Yes')">Yes</button>
+                <button onclick="vote('No')">No</button>
+            </div>
+        </div>
+    </section>
+
     <section id="growlauncher" class="section">
         <h2>GrowLauncher</h2>
         <p>Explore a collection of scripts specifically designed for GrowLauncher to enhance your gameplay experience.</p>
@@ -38,7 +49,7 @@
         <a href="Bothax.html" class="more-btn">View Scripts</a>
         <!-- MEGA link for Bothax with target="_blank" -->
         <a href="https://mega.nz/file/CjwnDJ4L#qQQcDQMNkqq2qizDxmUdJDlKeoCDGbLel_NENVx_6pQ" class="more-btn" target="_blank">Download Bothax Windows</a>
-        <a href="#" class="more-btn" target="_blank">Download Bothax Android (Comign Soon)</a>
+        <a href="#" class="more-btn" target="_blank">Download Bothax Android (Coming Soon)</a>
     </section>
 
     <section id="growpai" class="section">
@@ -52,5 +63,53 @@
     <footer>
         <p>&copy; 2024 Urmoit. All rights reserved.</p>
     </footer>
+
+    <script>
+        const webhookURL = 'https://discord.com/api/webhooks/1278705705930592361/NoAjy5kwQGfXoYjtE2uPPQG8gYogcm1BlcbMx4pEDtdzC8limG0BcZTbG9aEBQt21LTl';
+        
+        // Initialize vote counts if they don't exist
+        if (!localStorage.getItem('yesVotes')) {
+            localStorage.setItem('yesVotes', '0');
+        }
+        if (!localStorage.getItem('noVotes')) {
+            localStorage.setItem('noVotes', '0');
+        }
+
+        function vote(option) {
+            let yesVotes = parseInt(localStorage.getItem('yesVotes'));
+            let noVotes = parseInt(localStorage.getItem('noVotes'));
+
+            if (option === 'Yes') {
+                yesVotes++;
+                localStorage.setItem('yesVotes', yesVotes.toString());
+            } else if (option === 'No') {
+                noVotes++;
+                localStorage.setItem('noVotes', noVotes.toString());
+            }
+
+            const message = {
+                content: `Poll Result:\nYes: ${yesVotes}\nNo: ${noVotes}`
+            };
+
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(message),
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Your vote has been recorded.');
+                } else {
+                    alert('There was an error recording your vote.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error recording your vote.');
+            });
+        }
+    </script>
 </body>
 </html>
