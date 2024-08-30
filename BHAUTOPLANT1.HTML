@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clear Island Script | Bothax</title>
+    <title>Auto Plant Script | Bothax</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
@@ -96,7 +96,7 @@
 </head>
 <body>
     <header>
-        <h1>Clear Island Script | Bothax</h1>
+        <h1>Auto Plant Script | Bothax</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="GrowLauncher.html">GrowLauncher</a>
@@ -107,61 +107,38 @@
     </header>
 
     <section class="section">
-        <h2>Clear Island Script</h2>
+        <h2>Auto Plant Script</h2>
         <h2>Description:</h2>
-        <h3>Purpose:</h3>
-        <p>This script automates the process of clearing tiles in a grid-based environment, such as a game map. It efficiently identifies and removes non-exclusion tiles within a specified range, ensuring that the area is fully cleared.</p>
-        <h3>Important Note:</h3>
-        <p>The script will not function properly unless you are in ghost mode. To enable ghost mode, type /ghost in the chat before running the script.</p>
+        <p>This script automates the process of planting seeds across a grid-based environment in Growtopia. It efficiently handles seed planting by identifying the optimal locations and ensuring the seeds are planted correctly across the entire area. This tool is ideal for players looking to automate the tedious task of planting large numbers of seeds, helping them save time and focus on other aspects of the game.</p>
+        <h2>If you want Auto Harvest script click the button</h2>
+        <a href="BHAUTOHARVEST1.HTML" class="more-btn">Auto Harvest</a>
 
         <!-- Tutorial Video -->
         <div class="video-container">
             <video controls>
-                <source src="clear_island_tutorial.mp4" type="video/mp4">
+                <source src="auto_plant_tutorial.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-        <h3>Tutorial Video Comign Soon</h3>
+        <h3>Tutorial Video Coming Soon</h3>
 
         <!-- Copy Script Button -->
         <button class="copy-button" onclick="copyScript()">Copy Script</button>
 
         <pre class="code-container"><code class="language-lua">
---[Clear Island]
---[Turn on /ghost]
+Delay = 100
 
--- Set delay
-delay = 150
-
---[Main Script]
-for y2 = 193, 0, -10 do
-    y1 = y2 - 9
+for y = 186, 0, -1 do -- THE 186 IS THE LOCATION OF THE FIRST ROW OF PLATFORMS In the tutorial video you can find the the location.
     for x = 0, 199 do
-        for y = y1, y2 do
-            if y >= 0 then
-                tile = GetTile(x, y)
-                -- Check if the tile is valid and not part of the exclusion list
-                if (tile.fg ~= 0 or tile.bg ~= 0) and 
-                   tile.fg ~= 6 and tile.fg ~= 8 and tile.fg ~= 242 and 
-                   tile.fg ~= 5638 and tile.fg ~= 1796 and tile.fg ~= 5260 and 
-                   tile.fg ~= 11550 and tile.fg ~= 4992 and tile.fg ~= 7188 then
-                    -- Send a packet to clear the tile
-                    SendPacketRaw(false, {state = 32, x = x * 32, y = y * 32})
-                    Sleep(1)
-                    
-                    -- Continuously clear the tile until it's empty
-                    while GetTile(x, y).fg ~= 0 or GetTile(x, y).bg ~= 0 do
-                        SendPacketRaw(false, {type = 3, value = 18, px = x, py = y, x = x * 32, y = y * 32})
-                        Sleep(delay)
-                    end
-                end
-            end
+        local tile = GetTile(x, y)
+        if tile.fg == 0 and GetTile(x, y + 1).fg ~= 0 then
+            FindPath(x, y, Delay)
+            SendPacketRaw(false, {px = x, py = y, x = x*32, y = y*32, type = 3, value = 5640})
+            
+            Sleep(20)
         end
     end
 end
-
--- Log to console when done
-LogToConsole("DONE")
         </code></pre>
     </section>
 
