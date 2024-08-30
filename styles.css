@@ -91,16 +91,44 @@ footer {
     bottom: 0;
     width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.open-source-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.open-source-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
 }
 
 .paid-script-btn {
-    background-color: #FF5733; /* Different color for paid script button */
-    border: 2px solid #FF5733;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #FF5733;
+    border-color: #C70039;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .paid-script-btn:hover {
-    background-color: #C70039; /* Darker shade on hover */
+    background-color: #C70039;
     border-color: #C70039;
+    transform: translateY(-2px);
 }
 
 .join-server-btn {
