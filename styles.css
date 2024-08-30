@@ -1,3 +1,17 @@
+/* Header at: 29 */
+/* Navigation at: 45 */
+/* Section at: 65 */
+/* Buttons at: 85 */
+/* Footer at: 141 */
+/* Footer Buttons at: 156 */
+/* Sidebar at: 173 */
+/* Content at: 198 */
+/* Responsive Styles at: 208 */
+/* Join Server Page Styles at: 232 */
+/* Hide Sidebar for Join Server Page at: 283 */
+/* Back to Index Button at: 293 */
+/* Poll Container at: 313 */
+
 /* Reset default browser styles */
 * {
     margin: 0;
@@ -5,6 +19,7 @@
     box-sizing: border-box;
 }
 
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -12,6 +27,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header */
 header {
     background-color: #1d1d1d;
     color: #fff;
@@ -27,6 +43,7 @@ header h1 {
     font-size: 2.5em;
 }
 
+/* Navigation */
 nav {
     margin-top: 10px;
 }
@@ -46,6 +63,7 @@ nav a:hover {
     color: #f4f4f4;
 }
 
+/* Section */
 section {
     padding: 40px 20px;
     background: #fff;
@@ -65,6 +83,7 @@ section p {
     margin-bottom: 20px;
 }
 
+/* Buttons */
 .more-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -79,36 +98,6 @@ section p {
 
 .more-btn:hover {
     background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-footer {
-    background-color: #1d1d1d;
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.open-source-btn {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1em;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.open-source-btn:hover {
-    background-color: #218838;
     transform: translateY(-2px);
 }
 
@@ -132,16 +121,57 @@ footer {
 }
 
 .join-server-btn {
-    background-color: #28a745; /* Green color for joining server button */
-    border: 2px solid #28a745;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .join-server-btn:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838;
     border-color: #1e7e34;
+    transform: translateY(-2px);
 }
 
-/* Sidebar styles */
+/* Footer */
+footer {
+    background-color: #1d1d1d;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer Buttons */
+.open-source-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.open-source-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
@@ -166,6 +196,7 @@ footer {
     background-color: #575757;
 }
 
+/* Content */
 .content {
     margin-left: 220px;
     padding: 20px;
@@ -175,6 +206,7 @@ footer {
     margin-bottom: 40px;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
     nav a {
         display: block;
@@ -198,7 +230,7 @@ footer {
     }
 }
 
-/* Additional styles for join-server.html */
+/* Join Server Page Styles */
 .join-server-container {
     text-align: center;
     margin-top: 30px;
@@ -249,7 +281,7 @@ footer {
     background-color: #5b6eae;
 }
 
-/* Hide sidebar and adjust layout for join-server.html */
+/* Hide Sidebar for Join Server Page */
 .join-server-page .sidebar {
     display: none;
 }
@@ -259,7 +291,7 @@ footer {
     padding: 20px;
 }
 
-/* Bottom-right corner button for returning to index.html */
+/* Back to Index Button */
 .back-to-index-btn {
     position: fixed;
     bottom: 20px;
@@ -279,6 +311,7 @@ footer {
     transform: scale(1.1);
 }
 
+/* Poll Container */
 .poll-container {
     max-width: 600px;
     margin: 0 auto;
