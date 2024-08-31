@@ -1,16 +1,13 @@
-/* Header at: 29 */
-/* Navigation at: 45 */
-/* Section at: 65 */
-/* Buttons at: 85 */
-/* Footer at: 141 */
-/* Footer Buttons at: 156 */
-/* Sidebar at: 173 */
-/* Content at: 198 */
-/* Responsive Styles at: 208 */
-/* Join Server Page Styles at: 232 */
-/* Hide Sidebar for Join Server Page at: 283 */
-/* Back to Index Button at: 293 */
-/* Poll Container at: 313 */
+/* Header at: 27 */
+/* Navigation at: 43 */
+/* Section at: 63 */
+/* Buttons at: 83 */
+/* Footer at: 139 */
+/* Footer Buttons at: 154 */
+/* Content at: 171 */
+/* Responsive Styles at: 181 */
+/* Join Server Page Styles at: 205 */
+/* Poll Container at: 256 */
 
 /* Reset default browser styles */
 * {
@@ -171,31 +168,6 @@ footer {
     transform: translateY(-2px);
 }
 
-/* Sidebar */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    overflow-y: auto;
-}
-
-.sidebar a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    border-bottom: 1px solid #444;
-}
-
-.sidebar a:hover {
-    background-color: #575757;
-}
-
 /* Content */
 .content {
     margin-left: 220px;
@@ -279,36 +251,6 @@ footer {
 
 .join-server-container .discord-btn:hover {
     background-color: #5b6eae;
-}
-
-/* Hide Sidebar for Join Server Page */
-.join-server-page .sidebar {
-    display: none;
-}
-
-.join-server-page .content {
-    margin-left: 0;
-    padding: 20px;
-}
-
-/* Back to Index Button */
-.back-to-index-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 1.5em;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.back-to-index-btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
 }
 
 /* Poll Container */
