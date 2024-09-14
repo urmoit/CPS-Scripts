@@ -1,13 +1,14 @@
-/* Header at: 27 */
-/* Navigation at: 43 */
-/* Section at: 63 */
-/* Buttons at: 83 */
-/* Footer at: 139 */
-/* Footer Buttons at: 154 */
-/* Content at: 171 */
-/* Responsive Styles at: 181 */
-/* Join Server Page Styles at: 205 */
-/* Poll Container at: 256 */
+/* Header at: 28 */
+/* Navigation at: 44 */
+/* Section at: 64 */
+/* Section in section at: 84*/
+/* Buttons at: 104 */
+/* Footer at: 160 */
+/* Footer Buttons at: 175 */
+/* Content at: 192 */
+/* Responsive Styles at: 202 */
+/* Join Server Page Styles at: 226 */
+/* Poll Container at: 277 */
 
 /* Reset default browser styles */
 * {
@@ -76,6 +77,26 @@ section h2 {
 }
 
 section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Section in section */
+sectioninsection {
+    padding: 40px 20px;
+    background: #fff;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 16 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+sectioninsection h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+sectioninsection p {
     font-size: 1.1em;
     margin-bottom: 20px;
 }
